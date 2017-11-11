@@ -79,6 +79,7 @@
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(270,160)" to="(290,160)"/>
+    <wire from="(320,160)" to="(340,160)"/>
     <wire from="(340,100)" to="(360,100)"/>
     <wire from="(180,60)" to="(180,100)"/>
     <wire from="(180,120)" to="(180,160)"/>
@@ -87,21 +88,10 @@
     <wire from="(180,120)" to="(200,120)"/>
     <wire from="(210,160)" to="(230,160)"/>
     <wire from="(270,140)" to="(270,160)"/>
-    <wire from="(290,160)" to="(290,180)"/>
+    <wire from="(340,160)" to="(340,180)"/>
     <wire from="(230,140)" to="(230,160)"/>
     <wire from="(210,160)" to="(210,180)"/>
     <wire from="(140,160)" to="(180,160)"/>
-    <comp lib="0" loc="(290,180)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Clock"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="0" loc="(140,60)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Address"/>
-    </comp>
     <comp lib="0" loc="(360,100)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -109,9 +99,19 @@
       <a name="label" val="ReadData"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(140,160)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="WriteData"/>
+    </comp>
     <comp lib="4" loc="(340,100)" name="RAM">
       <a name="dataWidth" val="32"/>
       <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="0" loc="(140,60)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Address"/>
     </comp>
     <comp lib="0" loc="(210,180)" name="Pin">
       <a name="facing" val="north"/>
@@ -156,10 +156,14 @@
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
     </comp>
-    <comp lib="0" loc="(140,160)" name="Pin">
-      <a name="width" val="32"/>
+    <comp lib="0" loc="(340,180)" name="Pin">
+      <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="WriteData"/>
+      <a name="label" val="Clock"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="1" loc="(290,160)" name="NOT Gate">
+      <a name="facing" val="west"/>
     </comp>
   </circuit>
 </project>

@@ -78,30 +78,15 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(360,60)" to="(380,60)"/>
-    <wire from="(160,60)" to="(180,60)"/>
-    <wire from="(200,60)" to="(220,60)"/>
-    <comp lib="4" loc="(360,60)" name="ROM">
-      <a name="addrWidth" val="6"/>
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 6 32
-0
-</a>
-    </comp>
-    <comp lib="0" loc="(160,60)" name="Pin">
+    <wire from="(370,60)" to="(390,60)"/>
+    <wire from="(170,60)" to="(190,60)"/>
+    <wire from="(210,60)" to="(230,60)"/>
+    <comp lib="0" loc="(170,60)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
       <a name="label" val="ReadAddress"/>
     </comp>
-    <comp lib="0" loc="(380,60)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Instruction"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(180,60)" name="Splitter">
+    <comp lib="0" loc="(190,60)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="32"/>
       <a name="appear" val="center"/>
@@ -137,6 +122,21 @@
       <a name="bit29" val="none"/>
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
+    </comp>
+    <comp lib="0" loc="(390,60)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Instruction"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(370,60)" name="ROM">
+      <a name="addrWidth" val="6"/>
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 6 32
+0
+</a>
     </comp>
   </circuit>
 </project>
